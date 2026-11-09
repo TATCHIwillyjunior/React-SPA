@@ -23,3 +23,15 @@
 9. `app/globals.css` contains global styles and imports Tailwind CSS. The root layout imports it with `import "./globals.css";`.
 
 10. `AGENTS.md` provides instructions and project-specific guidance to AI coding agents. It is not needed to run the app; Next.js and the browser do not use it as application code.
+
+## Lab 2: Server and client rendering
+
+1. For `/movies`, the movie titles are present in the page source because the server fetches the movies and renders the list into the HTML. For `/movies-client`, the initial source contains “Loading movies...” but not the titles: the browser fetches the movie data and renders the list after the page loads.
+
+2. Without `export const dynamic = "force-dynamic"`, `/movies` is prerendered during `npm run build`. If I build tomorrow, the timestamp will show when that build rendered the page tomorrow. It will then stay the same across requests until the next build.
+
+3. `force-dynamic` is appropriate when each request needs fresh or request-specific data, such as a user's account details or current inventory. In that case, generating the page for each request is worth the extra wait because a cached page could be stale or show the wrong user's information.
+
+4. The `console.log` is in the `/movies` Server Component, so it runs on the server (Node.js), not in the browser. I can verify this by seeing the message in the terminal running Next.js. The handout's other checks are to view the page source or disable JavaScript and confirm the movie titles are still there. In development, the browser console may show a copy labeled “Server”; that is a debugging aid, not proof the code ran in the browser.
+
+5. I would choose static generation (SSG) for a public catalogue that changes once a week, and rebuild/deploy when the catalogue is updated. Visitors get a fast page without waiting for the simulated data query on every request. If the catalogue must update automatically without a new deployment, ISR with a weekly revalidation interval is a good alternative.
