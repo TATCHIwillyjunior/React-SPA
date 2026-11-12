@@ -81,7 +81,7 @@ cd movie-night
 npm run dev
 ```
 
-Open http://localhost:3000. Keep the terminal visible: the server logs appear there.
+Open http://localhost:3001. Keep the terminal visible: the server logs appear there.
 
 Open the `movie-night` folder in VS Code.
 
@@ -211,12 +211,12 @@ git commit -m "Lab 1: home and about pages"
 
 ### Lab 1 checkpoint
 
-* [ ] The app runs with `npm run dev`
-* [ ] Cache Components are off: `next.config.ts` does not contain `cacheComponents`
-* [ ] `/` shows the Movie Night home page with two links
-* [ ] `/about` works and its `<title>` is visible in the page source
-* [ ] `NOTES.md` answers the six questions of step 3
-* [ ] The work is committed
+* [x] The app runs with `npm run dev`
+* [x] Cache Components are off: `next.config.ts` does not contain `cacheComponents`
+* [x] `/` shows the Movie Night home page with two links
+* [x] `/about` works and its `<title>` is visible in the page source
+* [x] `NOTES.md` answers the six questions of step 3
+* [x] The work is committed
 
 ---
 
@@ -458,12 +458,12 @@ git commit -m "Lab 2: server and client movie pages"
 
 ### Lab 2 checkpoint
 
-* [ ] `/movies` lists 6 movies and the titles are in the page source
-* [ ] You saw `/movies` as ○ in the build output, then as ƒ after adding `force-dynamic`
-* [ ] You observed the timestamp frozen (static) and changing (dynamic) under `npm start`
-* [ ] `/movies-client` shows "Loading movies..." in its page source
-* [ ] `NOTES.md` answers the five questions
-* [ ] The work is committed
+* [x] `/movies` lists 6 movies and the titles are in the page source
+* [x] You saw `/movies` as ○ in the build output, then as ƒ after adding `force-dynamic`
+* [x] You observed the timestamp frozen (static) and changing (dynamic) under `npm start`
+* [x] `/movies-client` shows "Loading movies..." in its page source
+* [x] `NOTES.md` answers the five questions
+* [x] The work is committed
 
 ---
 
