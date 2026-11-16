@@ -16,6 +16,9 @@
 | /sessions | Global Play Log: chronological feed of play sessions, recent winners, and scores | No | Server-rendered so recent activity is visible when the page loads. |
 | /sessions/new | Log a Play Session: form to choose a game and enter the date, player count, winner, and notes; may preselect a game from a query parameter | No | Client Component form with loading and error states; a `?game=...` query parameter can preselect the game. |
 
+
+
+
 ## Data
 
 Entities (2 to 4), their main fields, and how they are related:
